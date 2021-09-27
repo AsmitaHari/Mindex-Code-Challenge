@@ -40,7 +40,7 @@ public class CompensationServiceImpl implements CompensationService {
         Compensation compensation = compensationRepository.findByEmployee(employee);
 
         if (compensation == null) {
-            throw new RuntimeException("No compensation on record for employeeId: " + employeeId);
+            throw new RuntimeException("No compensation record found for employeeId: " + employeeId);
         }
 
         return compensation;
